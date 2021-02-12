@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import useAuth from "../hooks/useAuth";
-// import signUp from "../hooks/useAuth";
+
 // import { Formik, Field, Form } from "formik";
 import { projectAuth } from "../firebase/config";
 import { useHistory } from "react-router-dom";
@@ -35,7 +34,6 @@ const LoginForm = ({ setIsValid }) => {
         console.log(errorMessage);
       });
   };
-
   // const handelSignUpSubmit = (e) => {
   //   e.preventDefault();
   //   const user = { email, password };
