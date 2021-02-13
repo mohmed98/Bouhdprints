@@ -20,7 +20,7 @@ const ImageGrid = ({ setSelectedImg }) => {
               alt={`reated at ${doc.createdAt}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
+              transition={{ delay: 0.5 }}
             />
           </motion.div>
         ))}

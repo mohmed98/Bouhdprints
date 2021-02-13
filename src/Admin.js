@@ -3,6 +3,8 @@ import LoginForm from "./comps/LoginForm";
 import firebase from "firebase/app";
 import "firebase/auth";
 import UploadForm from "./comps/UploadForm";
+import DashBoardTitle from "./comps/DashboardTitle";
+import { Box } from "@chakra-ui/react";
 
 const Admin = () => {
   const [isValid, setIsValid] = useState(false);
@@ -12,9 +14,12 @@ const Admin = () => {
     }
   });
   return (
-    <div className="App">
-      {!isValid && <LoginForm setIsValid={setIsValid} />}
-      {isValid && <UploadForm isValid={isValid} />}
+    <div className="Admin">
+      {!isValid && <LoginForm />}
+      <Box m={2}>
+        {isValid && <DashBoardTitle setIsValid={setIsValid} />}
+        {isValid && <UploadForm />}
+      </Box>
     </div>
   );
 };
