@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // import { Formik, Field, Form } from "formik";
 import { projectAuth } from "../firebase/config";
-import { useHistory } from "react-router-dom";
 
 import {
   FormControl,
@@ -13,25 +12,18 @@ import {
   // FormHelperText,
 } from "@chakra-ui/react";
 import Title from "./Title";
-const LoginForm = ({ setIsValid }) => {
+const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const history = useHistory();
 
   const handelSignInSubmit = (e) => {
     e.preventDefault();
-    projectAuth
-      .signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        setIsValid(true);
-        history.push("/admin");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
-      });
+    projectAuth.signInWithEmailAndPassword(email, password).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    });
   };
 
   return (

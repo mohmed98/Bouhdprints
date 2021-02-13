@@ -1,6 +1,12 @@
 import React from "react";
-const DashBoardTitle = () => {
-  return <div>DashBoardTitle</div>;
+import SignoutBtn from "./SignoutBtn";
+const DashBoardTitle = ({ setIsValid }) => {
+  return (
+    <div>
+      <h1>DashBoardTitle</h1>
+      <SignoutBtn setIsValid={setIsValid} />
+    </div>
+  );
 };
 
 export default DashBoardTitle;
