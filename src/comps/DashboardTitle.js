@@ -1,11 +1,24 @@
 import React from "react";
+import { Center, Heading, Flex, Spacer } from "@chakra-ui/react";
 import SignoutBtn from "./SignoutBtn";
+import DashboardMenu from "./DashboardMenu";
+import { Link } from "react-router-dom";
 const DashBoardTitle = ({ setIsValid }) => {
   return (
-    <div>
-      <h1>DashBoardTitle</h1>
-      <SignoutBtn setIsValid={setIsValid} />
-    </div>
+    <>
+      <Flex mb={2}>
+        <DashboardMenu p={4} />
+        <Spacer />
+        <Center>
+          <Heading size="md">
+            <Link to="/admin">Dashboard</Link>
+          </Heading>
+        </Center>
+        <Spacer />
+
+        <SignoutBtn setIsValid={setIsValid} />
+      </Flex>
+    </>
   );
 };
 
