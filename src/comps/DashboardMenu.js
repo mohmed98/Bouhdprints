@@ -7,11 +7,11 @@ const DashboardMenu = () => {
 
   return (
     <div>
-      <Menu defaultIsOpen={true} autoSelect={false}>
+      <Menu autoSelect={false}>
         <MenuButton as={Button}>Menu</MenuButton>
         <MenuList>
           <MenuItem>
-            <Link to={`${url}/uploadform`}>uploadform</Link>
+            <Link to={`${url}/uploadform`}>Upload single image</Link>
           </MenuItem>
           <MenuItem>
             <Link to={`${url}/deletephoto`}>delete photo</Link>
