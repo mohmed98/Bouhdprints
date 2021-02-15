@@ -8,11 +8,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/admin">
             <Admin />
-          </Route>
-          <Route path="/">
-            <Home />
           </Route>
         </Switch>
       </div>
