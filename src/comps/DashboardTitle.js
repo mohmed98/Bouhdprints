@@ -1,8 +1,8 @@
 import React from "react";
 import { Center, Heading, Flex, Spacer } from "@chakra-ui/react";
-import SignoutBtn from "./SignoutBtn";
 import DashboardMenu from "./DashboardMenu";
 import { Link } from "react-router-dom";
+import AccountMenu from "./AccountMenu";
 const DashBoardTitle = ({ setIsValid }) => {
   return (
     <>
@@ -16,7 +16,7 @@ const DashBoardTitle = ({ setIsValid }) => {
         </Center>
         <Spacer />
 
-        <SignoutBtn setIsValid={setIsValid} />
+        <AccountMenu setIsValid={setIsValid} />
       </Flex>
     </>
   );
