@@ -32,7 +32,12 @@ const UploadForm = () => {
           <form>
             <FormControl>
               <FormLabel htmlFor="image">Choose Image</FormLabel>
-              <Input type="file" onChange={changeHandler} variant="unstyled" />
+              <Input
+                type="file"
+                onChange={changeHandler}
+                variant="unstyled"
+                p={1}
+              />
               <div>
                 <div>{error && <div>{error}</div>}</div>
                 <div>{file && <div>{file.name}</div>}</div>

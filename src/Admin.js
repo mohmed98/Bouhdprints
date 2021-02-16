@@ -6,6 +6,8 @@ import UploadForm from "./comps/UploadForm";
 import DashBoardTitle from "./comps/DashboardTitle";
 import { Box } from "@chakra-ui/react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
+import DeleteImage from "./comps/DeleteImage";
+import ChangePassword from "./comps/ChangePassword";
 
 const Admin = () => {
   const [isValid, setIsValid] = useState(false);
@@ -29,7 +31,10 @@ const Admin = () => {
               <UploadForm />
             </Route>
             <Route path={`${path}/deletephoto`}>
-              <h2>Dete photo</h2>
+              <DeleteImage />
+            </Route>
+            <Route path={`${path}/changepassword`}>
+              <ChangePassword setIsValid={setIsValid} />
             </Route>
           </Switch>
         </Box>
